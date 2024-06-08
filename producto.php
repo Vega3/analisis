@@ -21,7 +21,7 @@
             <div class="container-img">
                 <img
                     src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                    alt="imagen-producto"
+                    alt="producto"
                 />
             </div>
             <div class="container-info-product">
