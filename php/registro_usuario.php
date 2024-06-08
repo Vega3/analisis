@@ -8,7 +8,7 @@
     $cargo = $_POST['cargo'];
     
 
-    $query = "INSERT INTO n_usuarios(username, email,contrasena, cargo) 
+    $query = "INSERT INTO n_usuarios(username, email,contrasena, cargo)
               VALUES('$username', '$email','$password','$cargo')";
 
     
@@ -47,4 +47,3 @@
     }
 
     mysqli_close($conexion);
-?>

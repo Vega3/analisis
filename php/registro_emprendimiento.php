@@ -10,7 +10,7 @@
     
     
 
-    $query = "INSERT INTO emprendimientos(nombre, descripcion,telefono, correo, foto) 
+    $query = "INSERT INTO emprendimientos(nombre, descripcion,telefono, correo, foto)
               VALUES('$nombre', '$descripcion','$telefono','$correo','$foto')";
 
     
@@ -39,4 +39,3 @@
     }
 
     mysqli_close($conexion);
-?>

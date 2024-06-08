@@ -20,4 +20,3 @@ if (mysqli_num_rows($verificar_login) > 0) {
 }
 
 mysqli_close($conexion);
-?>
