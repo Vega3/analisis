@@ -1,0 +1,63 @@
+# Versión de AppVeyor
+version: 1.12.{build}
+
+# Imagen del entorno de construcción (Windows)
+image: Visual Studio 2019
+
+# Variables de entorno
+environment:
+  PHP_URL: 'https://windows.php.net/downloads/releases/php-8.2.20-nts-Win32-vs16-x86.zip'
+  PHP_DIR: 'C:\\php'
+  PHP_ZIP: 'C:\\php\\php.zip'
+
+# Instalación de PHP y Composer
+install:
+  # Descargar y configurar PHP
+  - ps: |
+      $ErrorActionPreference = 'Stop'
+      $phpPath = $env:PHP_DIR
+      $phpZip = $env:PHP_ZIP
+
+      # Crear directorio para PHP
+      if (-Not (Test-Path $phpPath)) {
+        New-Item -ItemType Directory -Path $phpPath
+      }
+
+      # Descargar PHP
+      Write-Host "Downloading PHP from $($env:PHP_URL)..."
+      Invoke-WebRequest -Uri $env:PHP_URL -OutFile $phpZip
+
+      # Verificar que el archivo ZIP no esté dañado
+      Write-Host "Verifying downloaded ZIP file..."
+      $downloadedFileSize = (Get-Item $phpZip).length
+      if ($downloadedFileSize -lt 1MB) {
+        throw "The downloaded ZIP file is too small. Download may have failed."
+      }
+
+      # Expandir el archivo ZIP
+      Write-Host "Extracting PHP files..."
+      Expand-Archive -Path $phpZip -DestinationPath $phpPath -Force
+
+  # Agregar la ruta de PHP al entorno PATH
+  - ps: |
+      $env:Path += ";$phpPath"
+
+  # Descargar y configurar Composer
+  - ps: |
+      $composerUrl = 'https://getcomposer.org/installer'
+      $composerSetup = "$phpPath\\composer-setup.php"
+      Write-Host "Downloading Composer from $composerUrl..."
+      Invoke-WebRequest -Uri $composerUrl -OutFile $composerSetup
+      php $composerSetup --install-dir=$phpPath --filename=composer
+
+# Instalar dependencias de PHP usando Composer
+before_build:
+  - ps: |
+      & "$env:PHP_DIR\\composer" install
+
+# Verificación de sintaxis PHP
+build_script:
+  - ps: |
+      Get-ChildItem -Recurse -Include *.php | ForEach-Object { php -l $_.FullName }
+
+# Sin despliegue ni notificaciones
