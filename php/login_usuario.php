@@ -5,9 +5,19 @@ include_once 'conexion.php';
 $email = $_POST['email'];
 $password = $_POST['contrasena'];
 
-$verificar_login = mysqli_query($conexion, "SELECT * FROM n_usuarios WHERE email='$email' and contrasena='$password' ");
+// Preparar la consulta
+$stmt = $conexion->prepare("SELECT * FROM n_usuarios WHERE email=? and contrasena=?");
 
-if (mysqli_num_rows($verificar_login) > 0) {
+// Vincular los parámetros
+$stmt->bind_param("ss", $email, $password);
+
+// Ejecutar la consulta
+$stmt->execute();
+
+// Obtener los resultados
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
     header("Location: ../login.php");
     exit(); // Es una buena práctica usar exit() después de un redireccionamiento
 } else {
@@ -19,4 +29,5 @@ if (mysqli_num_rows($verificar_login) > 0) {
     ';
 }
 
-mysqli_close($conexion);
+$stmt->close();
+$conexion->close();

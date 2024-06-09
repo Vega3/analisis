@@ -13,33 +13,21 @@
     <div class="container">
        
         <div class="card">
-            <img src="media/logo_bancolombia.png">
+            <img src="media/logo_bancolombia.png" alt="Logo de Bancolombia">
             
-            <p>Plazo desde 48 a 96 meses,</p>
-            <p>Desde 1.000.000 hasta 500.000.000</p>
-            <p>Sin Codeudor</p>
-            <p>2,33% mensual mes vencido</p>
-            <a href="#">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
         <div class="card">
-            <img src="media/banco-av-villas-op5.jpg">
+            <img src="media/banco-av-villas-op5.jpg" alt="Logo de Banco AV Villas">
             
-            <p>Plazo desde 6 a 72 meses,</p>
-            <p>Desde 1.000.000 hasta 500.000.000</p>
-            <p>Sin Codeudor</p>
-            <p>1,9% mes vencido</p>
-            <a href="#">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
         <div class="card">
-            <img src="media/banco_occidente.png">
+            <img src="media/banco_occidente.png" alt="Logo de Banco de Occidente">
             
-            <p>Plazo desde 12 a 84 meses</p>
-            <p>Desde 1.000.000 hasta 80.000. 000</p>
-            <p>Sin Codeudor</p>
-            <p> 1,9% mes vencido</p>
-            <a href="#">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
     </div>
@@ -49,33 +37,21 @@
     <div class="container">
        
         <div class="card">
-            <img src="media/confiar.png">
+            <img src="media/confiar.png" alt="Logo de Confiar">
             
-            <p>Plazo 6 meses a 5 años.</p>
-            <p>Desde 1.000.000 hasta 200.000.000</p>
-            <p>El Codeudor depende del solcitante</p>
-            <p>Aproximadamente 1.2% - 2.2%</p>
-            <a href="informacion_cooperativa.php">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
         <div class="card">
-            <img src="media/CFA.png">
+            <img src="media/CFA.png" alt="Logo de CFA">
             
-            <p>Plazo 12 meses a 10 años</p>
-            <p>Desde 2.000.000 hasta 100.000.000</p>
-            <p>Si Codeudor</p>
-            <p> Aproximadamente 1.3% - 2.5%</p>
-            <a href="#">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
         <div class="card">
-            <img src="media/cotrafa_1.jpg">
+            <img src="media/cotrafa_1.jpg" alt="Logo de Cotrafa">
             
-            <p>Plazo 6 meses a 7 años</p>
-            <p>Desde 500.000 hasta 150.000.000</p>
-            <p>El Codeudor depende del solcitante</p>
-            <p>Aproximadamente 1.5% - 2.3%</p>
-            <a href="#">Leer más</a>
+            <!-- Resto del código -->
         </div>
         
     </div>

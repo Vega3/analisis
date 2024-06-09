@@ -13,7 +13,7 @@
 body{
     margin: 0 auto;
     max-width: 1200px;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     color: #333;
 }
 .navagation a {

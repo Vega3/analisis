@@ -50,12 +50,12 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" id="email" name="email" required>
-                    <label>Email</label>
+                    <label for="email-login">Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input type="password" id="contrasena" name="contrasena" required>
-                    <label>Password</label>
+                    <label for="contrasena-login">Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox"> remember me</label>
@@ -74,22 +74,22 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" id="username" name="username" required>
-                    <label>Nombre De Usuario</label>
+                    <label for="username-register">Nombre De Usuario</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" id="email" name="email" required>
-                    <label>Email</label>
+                    <label for="email-register">Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input type="password" id="contrasena" name="contrasena" required>
-                    <label>Contraseña</label>
+                    <label for="contrasena-register">Contraseña</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" list="cargos" id="cargo" name="cargo" required>
-                    <label>type of user</label>
+                    <label for="cargo=register">type of user</label>
                     <datalist id="cargos">
                         <option value="Emprendedor"></option>
                         <option value="Accionista"></option>
