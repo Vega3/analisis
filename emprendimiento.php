@@ -14,7 +14,7 @@
         <header>
             <h2 class="logo">FinSist</h2>
             <nav class="navagation">
-                <a href="prueba.php">Inicio</a>
+                <a href="index.php">Inicio</a>
                 <a href="emprendimiento.php">Empredimientos</a>
                 <a href="entidades_financ.php">Financiamiento</a>
                 <a href="">Servicio al cliente</a>
